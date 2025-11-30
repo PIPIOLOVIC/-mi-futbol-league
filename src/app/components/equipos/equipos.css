@@ -1,0 +1,10 @@
+.team-list { display:block; }
+.team-card { display:flex; align-items:center; gap:12px; padding:12px; border-radius:8px; background:var(--color-surface); box-shadow:0 4px 14px rgba(16,24,40,0.04); margin-bottom:10px; }
+.team-card .logo { width:56px; height:56px; background:#f1f3f5; border-radius:8px; display:flex; align-items:center; justify-content:center; font-weight:700; color:var(--muted); }
+.team-card h4 { margin:0; font-size:1rem; }
+.team-meta { color:var(--muted); font-size:0.95rem; }
+.teams-table { width:100%; border-collapse:collapse; margin-top:12px; }
+.teams-table th, .teams-table td { padding:10px 12px; border-bottom:1px solid #f0f2f5; }
+.teams-table thead th { color:var(--muted); font-weight:600; }
+.team-actions { display:flex; gap:8px; }
+.empty-state { padding:18px; text-align:center; color:var(--muted); }

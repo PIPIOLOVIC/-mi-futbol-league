@@ -1,0 +1,75 @@
+<div class="container-main">
+    <div class="card form-card">
+        <div class="card-header">
+            <h2 class="card-title text-center">
+                <i class="bi bi-calendar-check me-2"></i>Programar Partido
+            </h2>
+        </div>
+        <div class="card-body p-4">
+            <form (ngSubmit)="onSubmit()" #partidoForm="ngForm">
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <label for="fecha" class="form-label">Fecha</label>
+                        <input type="date" class="form-control" id="fecha" required [(ngModel)]="partido.fecha"
+                            name="fecha">
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label for="hora" class="form-label">Hora</label>
+                        <input type="time" class="form-control" id="hora" required [(ngModel)]="partido.hora"
+                            name="hora">
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <label for="equipo_local" class="form-label">Equipo Local</label>
+                        <select class="form-select" id="equipo_local" required [(ngModel)]="partido.equipo_local_id"
+                            name="equipo_local_id">
+                            <option [ngValue]="0" disabled>Seleccione equipo local</option>
+                            <option *ngFor="let equipo of equipos" [ngValue]="equipo.id">{{ equipo.nombre }}</option>
+                        </select>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label for="equipo_visitante" class="form-label">Equipo Visitante</label>
+                        <select class="form-select" id="equipo_visitante" required
+                            [(ngModel)]="partido.equipo_visitante_id" name="equipo_visitante_id">
+                            <option [ngValue]="0" disabled>Seleccione equipo visitante</option>
+                            <option *ngFor="let equipo of equipos" [ngValue]="equipo.id">{{ equipo.nombre }}</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="mb-4">
+                    <label for="estado" class="form-label">Estado</label>
+                    <select class="form-select" id="estado" required [(ngModel)]="partido.estado" name="estado">
+                        <option value="programado">Programado</option>
+                        <option value="en_juego">En Juego</option>
+                        <option value="finalizado">Finalizado</option>
+                    </select>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <label for="goles_local" class="form-label">Goles Local</label>
+                        <input type="number" class="form-control" id="goles_local" required min="0"
+                            [(ngModel)]="partido.goles_local" name="goles_local"
+                            [disabled]="partido.estado === 'programado'">
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label for="goles_visitante" class="form-label">Goles Visitante</label>
+                        <input type="number" class="form-control" id="goles_visitante" required min="0"
+                            [(ngModel)]="partido.goles_visitante" name="goles_visitante"
+                            [disabled]="partido.estado === 'programado'">
+                    </div>
+                </div>
+
+                <div class="d-grid gap-2">
+                    <button type="submit" class="btn btn-primary btn-lg" [disabled]="!partidoForm.form.valid">
+                        <i class="bi bi-calendar-plus me-2"></i>Guardar Partido
+                    </button>
+                    <a routerLink="/partidos" class="btn btn-link text-secondary">Cancelar</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

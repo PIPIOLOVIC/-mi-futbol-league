@@ -1,0 +1,56 @@
+<div class="container-main">
+    <div class="card form-card">
+        <div class="card-header">
+            <h2 class="card-title text-center">
+                <i class="bi bi-shield-plus me-2"></i>Agregar Nuevo Equipo
+            </h2>
+        </div>
+        <div class="card-body p-4">
+            <form (ngSubmit)="onSubmit()" #equipoForm="ngForm">
+                <div class="mb-4">
+                    <label for="nombre" class="form-label">Nombre del Equipo</label>
+                    <div class="input-group">
+                        <span class="input-group-text bg-light"><i class="bi bi-shield"></i></span>
+                        <input type="text" class="form-control" id="nombre" required [(ngModel)]="equipo.nombre"
+                            name="nombre" placeholder="Ej. Real Madrid">
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6 mb-4">
+                        <label for="ciudad" class="form-label">Ciudad</label>
+                        <div class="input-group">
+                            <span class="input-group-text bg-light"><i class="bi bi-geo-alt"></i></span>
+                            <input type="text" class="form-control" id="ciudad" required [(ngModel)]="equipo.ciudad"
+                                name="ciudad" placeholder="Ej. Madrid">
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                        <label for="fundacion" class="form-label">Año de Fundación</label>
+                        <div class="input-group">
+                            <span class="input-group-text bg-light"><i class="bi bi-calendar"></i></span>
+                            <input type="number" class="form-control" id="fundacion" required
+                                [(ngModel)]="equipo.fundacion" name="fundacion" placeholder="Ej. 1902">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mb-4">
+                    <label for="entrenador" class="form-label">Entrenador</label>
+                    <div class="input-group">
+                        <span class="input-group-text bg-light"><i class="bi bi-person"></i></span>
+                        <input type="text" class="form-control" id="entrenador" required [(ngModel)]="equipo.entrenador"
+                            name="entrenador" placeholder="Nombre del DT">
+                    </div>
+                </div>
+
+                <div class="d-grid gap-2">
+                    <button type="submit" class="btn btn-primary btn-lg" [disabled]="!equipoForm.form.valid">
+                        <i class="bi bi-save me-2"></i>Guardar Equipo
+                    </button>
+                    <a routerLink="/equipos" class="btn btn-link text-secondary">Cancelar</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

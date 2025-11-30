@@ -1,0 +1,65 @@
+<div class="container-main">
+    <div class="card form-card">
+        <div class="card-header">
+            <h2 class="card-title text-center">
+                <i class="bi bi-person-plus me-2"></i>Registrar Jugador
+            </h2>
+        </div>
+        <div class="card-body p-4">
+            <form (ngSubmit)="onSubmit()" #jugadorForm="ngForm">
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <label for="nombre" class="form-label">Nombre</label>
+                        <input type="text" class="form-control" id="nombre" required [(ngModel)]="jugador.nombre"
+                            name="nombre" placeholder="Nombre">
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label for="apellido" class="form-label">Apellido</label>
+                        <input type="text" class="form-control" id="apellido" required [(ngModel)]="jugador.apellido"
+                            name="apellido" placeholder="Apellido">
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <label for="posicion" class="form-label">Posición</label>
+                    <select class="form-select" id="posicion" required [(ngModel)]="jugador.posicion" name="posicion">
+                        <option value="">Seleccione una posición</option>
+                        <option value="Portero">Portero</option>
+                        <option value="Defensa">Defensa</option>
+                        <option value="Mediocampista">Mediocampista</option>
+                        <option value="Delantero">Delantero</option>
+                    </select>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <label for="edad" class="form-label">Edad</label>
+                        <input type="number" class="form-control" id="edad" required [(ngModel)]="jugador.edad"
+                            name="edad" placeholder="Edad">
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label for="numero_camiseta" class="form-label">Número de Camiseta</label>
+                        <input type="number" class="form-control" id="numero_camiseta" required
+                            [(ngModel)]="jugador.numero_camiseta" name="numero_camiseta" placeholder="# Camiseta">
+                    </div>
+                </div>
+
+                <div class="mb-4">
+                    <label for="equipo_id" class="form-label">Equipo</label>
+                    <select class="form-select" id="equipo_id" required [(ngModel)]="jugador.equipo_id"
+                        name="equipo_id">
+                        <option [ngValue]="0" disabled>Seleccione un equipo</option>
+                        <option *ngFor="let equipo of equipos" [ngValue]="equipo.id">{{ equipo.nombre }}</option>
+                    </select>
+                </div>
+
+                <div class="d-grid gap-2">
+                    <button type="submit" class="btn btn-primary btn-lg" [disabled]="!jugadorForm.form.valid">
+                        <i class="bi bi-check-lg me-2"></i>Guardar Jugador
+                    </button>
+                    <a routerLink="/jugadores" class="btn btn-link text-secondary">Cancelar</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

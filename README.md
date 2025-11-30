@@ -57,3 +57,39 @@ Angular CLI does not come with an end-to-end testing framework by default. You c
 ## Additional Resources
 
 For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+
+## Paleta de colores (diseño)
+
+- **Primario:** `#0b5ed7` (azul)
+- **Primario oscuro:** `#0954b0`
+- **Secundario / Texto mutado:** `#6c757d`
+- **Acento:** `#ffb703` (amarillo cálido)
+- **Fondo:** `#f4f6f9`
+- **Superficie (tarjetas):** `#ffffff`
+
+Estas variables están disponibles en `src/styles.css` como variables CSS (ej. `--color-primary`).
+
+## Comandos para ejecutar (PowerShell)
+
+- Abrir la carpeta del proyecto:
+
+```powershell
+cd "C:\Users\maryc\Desktop\Proyecto final\mi-futbol-league"
+```
+
+- Ejecutar backend (Node/Express):
+
+```powershell
+node .\backend\server.js
+```
+
+- Ejecutar frontend (Angular):
+
+```powershell
+ng serve
+```
+
+Si el comando `ng` no está disponible, instala Angular CLI globalmente con `npm i -g @angular/cli` o usa el script local (`npx ng serve`).
+
+---
+Paleta y estilos aplicados para mejorar la consistencia visual: tipografía, tarjetas, botones y formularios. Si quieres que haga ajustes (colores, fuente, tamaños) dime qué prefieres y lo aplico.

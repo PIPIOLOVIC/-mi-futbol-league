@@ -1,1 +1,208 @@
-/* You can add global styles to this file, and also import other style files */
+﻿/* Global styles: Dark Mode Theme */
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap');
+
+:root {
+	--color-primary: #4caf50;
+	--color-bg: #121212;
+	--color-surface: #1e1e1e;
+	--color-surface-light: #2a2a2a;
+	--text-primary: #ffffff;
+	--text-secondary: #b0b0b0;
+	--text-light: #e0e0e0;
+	--radius-md: 0.5rem;
+	--radius-lg: 0.75rem;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+html,
+body {
+	height: 100%;
+}
+
+body {
+	margin: 0;
+	font-family: 'Outfit', sans-serif;
+	background-color: var(--color-bg);
+	color: var(--text-primary);
+}
+
+.container-main {
+	max-width: 1200px;
+	margin: 2rem auto;
+	padding: 0 1.5rem;
+}
+
+h1,
+h2,
+h3 {
+	color: var(--text-primary);
+}
+
+p {
+	color: var(--text-secondary);
+}
+
+.card {
+	background: var(--color-surface);
+	border-radius: var(--radius-lg);
+	border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.card h3,
+.card h4,
+.card h5 {
+	color: var(--text-primary) !important;
+}
+
+.card p {
+	color: var(--text-light) !important;
+}
+
+.card-header {
+	background-color: var(--color-surface) !important;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+.card-body {
+	color: var(--text-primary);
+}
+
+.card-body .fw-bold {
+	color: var(--text-primary) !important;
+}
+
+.btn-primary {
+	background-color: var(--color-primary);
+	color: #000;
+	padding: 0.625rem 1.25rem;
+	border-radius: var(--radius-md);
+}
+
+.form-control {
+	background-color: var(--color-surface-light);
+	color: var(--text-primary);
+	border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.table {
+	width: 100%;
+	border-collapse: collapse;
+	background-color: var(--color-surface) !important;
+}
+
+.table th {
+	background-color: var(--color-surface) !important;
+	color: var(--text-secondary);
+	padding: 1rem;
+}
+
+.table td {
+	padding: 1rem;
+	color: var(--text-primary);
+	background-color: var(--color-surface) !important;
+}
+
+.table tbody,
+.table tbody tr,
+.table tbody td {
+	background-color: var(--color-surface) !important;
+}
+
+.table thead.bg-light {
+	background-color: var(--color-surface) !important;
+}
+
+.table tr {
+	background-color: var(--color-surface) !important;
+}
+
+.text-primary {
+	color: var(--color-primary) !important;
+}
+
+.text-secondary {
+	color: var(--text-secondary) !important;
+}
+
+.text-muted {
+	color: var(--text-secondary) !important;
+}
+
+.text-dark {
+	color: var(--text-primary) !important;
+}
+
+.bg-light {
+	background-color: var(--color-surface-light) !important;
+}
+
+.bg-white {
+	background-color: var(--color-surface) !important;
+}
+
+.fw-bold {
+	color: var(--text-primary) !important;
+}
+
+.display-6 {
+	color: var(--text-primary) !important;
+}
+
+.badge {
+	background-color: var(--color-surface-light) !important;
+	color: var(--text-light) !important;
+	padding: 0.25rem 0.5rem;
+	border-radius: 0.25rem;
+	border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.badge.bg-light {
+	background-color: var(--color-surface-light) !important;
+	color: var(--text-light) !important;
+}
+
+.badge.bg-success-subtle {
+	background-color: rgba(76, 175, 80, 0.2) !important;
+	color: var(--color-primary) !important;
+}
+
+.badge.bg-warning-subtle {
+	background-color: rgba(255, 171, 0, 0.2) !important;
+	color: #ffab00 !important;
+}
+
+.badge.bg-primary-subtle {
+	background-color: rgba(76, 175, 80, 0.2) !important;
+	color: var(--color-primary) !important;
+}
+
+.navbar {
+	background-color: var(--color-surface) !important;
+}
+
+.nav-link {
+	color: var(--text-secondary) !important;
+}
+
+.d-flex {
+	display: flex;
+}
+
+.justify-content-between {
+	justify-content: space-between;
+}
+
+.align-items-center {
+	align-items: center;
+}
+
+.gap-2 {
+	gap: 0.5rem;
+}
+
+.w-100 {
+	width: 100%;
+}

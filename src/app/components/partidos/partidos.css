@@ -1,0 +1,10 @@
+.match-row { display:flex; align-items:center; justify-content:space-between; gap:12px; padding:12px; border-radius:8px; background:var(--color-surface); box-shadow:0 4px 14px rgba(16,24,40,0.04); margin-bottom:10px; }
+.match-teams { display:flex; gap:12px; align-items:center; }
+.match-score { font-weight:700; font-size:1.1rem; }
+.match-meta { color:var(--muted); font-size:0.92rem; }
+.matches-table { width:100%; border-collapse:collapse; margin-top:12px; }
+.matches-table th, .matches-table td { padding:10px 12px; border-bottom:1px solid #f0f2f5; }
+.matches-table thead th { color:var(--muted); font-weight:600; }
+.match-status { padding:6px 8px; border-radius:6px; font-weight:600; font-size:0.85rem; }
+.status-scheduled { background: rgba(11,94,215,0.08); color:var(--color-primary); }
+.status-played { background: rgba(33,37,41,0.06); color: #212529; }

@@ -1,0 +1,87 @@
+/* Carousel Styles */
+.hero-slide {
+    position: relative;
+    height: 600px;
+    background-color: #000;
+}
+
+.hero-img {
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.7;
+}
+
+.hero-content {
+    bottom: 20%;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Icon Boxes - Mejorados con gradientes */
+.icon-box {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    border: 3px solid rgba(255, 255, 255, 0.1);
+}
+
+.bg-primary-light {
+    background: linear-gradient(135deg, #4caf50 0%, #2e7d32 100%);
+    color: #fff;
+}
+
+.bg-success-light {
+    background: linear-gradient(135deg, #00e676 0%, #00c853 100%);
+    color: #000;
+}
+
+.bg-warning-light {
+    background: linear-gradient(135deg, #ffab00 0%, #ff9800 100%);
+    color: #000;
+}
+
+.hover-lift {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hover-lift:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 12px 24px rgba(76, 175, 80, 0.3);
+}
+
+/* Grid Layout for Cards */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+/* Parallax Section */
+.parallax-section {
+    background-image: url('/assets/stadium2.jpg');
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 400px;
+    position: relative;
+}
+
+.parallax-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+}
+
+.parallax-content {
+    position: relative;
+    z-index: 1;
+}
